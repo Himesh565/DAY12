@@ -96,12 +96,10 @@ src/
 
 
 ## ▶️ How to Run the Project
+
 bash
-Copy code
 npm install
 npm run dev
-Open in browser:
 
-arduino
-Copy code
+Open in browser:
 http://localhost:5173
