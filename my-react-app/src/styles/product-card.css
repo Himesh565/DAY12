@@ -1,0 +1,59 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .product-card {
+    @apply bg-custom-card rounded-custom shadow-custom overflow-hidden;
+    @apply transition-all duration-300 ease-in-out flex flex-col;
+    @apply border border-transparent hover:border-custom-accent/30;
+    backdrop-filter: blur(10px);
+    background: linear-gradient(145deg, rgba(26, 31, 53, 0.9), rgba(26, 31, 53, 0.6));
+  }
+
+  .product-card:hover {
+    @apply -translate-y-2 shadow-custom-hover;
+    @apply scale-[1.02];
+  }
+
+  .product-image {
+    @apply w-full h-[180px] bg-[#111827] overflow-hidden;
+  }
+
+  .product-image img {
+    @apply w-full h-full object-cover transition-transform duration-500 ease-out;
+  }
+
+  .product-card:hover .product-image img {
+    @apply scale-110 rotate-1;
+  }
+
+  .product-content {
+    @apply p-[18px] flex flex-col gap-2.5;
+  }
+
+  .product-title a {
+    @apply text-custom-text text-lg font-semibold no-underline;
+  }
+
+  .product-title a:hover {
+    @apply text-custom-accent;
+    text-shadow: 0 0 10px rgba(59, 130, 246, 0.5);
+  }
+
+  .product-desc {
+    @apply text-sm text-custom-muted leading-tight min-h-[38px];
+  }
+
+  .product-bottom {
+    @apply mt-auto flex justify-between items-center;
+  }
+
+  .product-price {
+    @apply text-lg font-bold;
+    background: linear-gradient(135deg, #3b82f6, #8b5cf6);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+}
